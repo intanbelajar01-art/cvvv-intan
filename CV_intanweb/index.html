@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="CV Online Intan - Siswi Desain Komunikasi Visual SMKS TI Annisa 2. Portofolio karya desain grafis dan pengalaman organisasi.">
+    <meta name="keywords" content="CV, Desain Komunikasi Visual, DKV, Portofolio, Intan, SMKS TI Annisa 2">
+    <meta name="author" content="Intan">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph untuk sharing -->
+    <meta property="og:title" content="Intan - Desain Komunikasi Visual | CV Portfolio">
+    <meta property="og:description" content="CV Online Intan - Siswi Desain Komunikasi Visual SMKS TI Annisa 2">
+    <meta property="og:type" content="website">
+    
+    <!-- Theme Color untuk mobile browser -->
+    <meta name="theme-color" content="#8B6F4E">
+    <meta name="msapplication-navbutton-color" content="#8B6F4E">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#8B6F4E">
+    
+    <title>Intan - Desain Komunikasi Visual | CV Portfolio</title>
+    
+    <!-- Google Fonts - Elegant Serif Fonts dengan fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons dengan fallback lokal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <!-- ==================== NAVIGATION ==================== -->
+    <!-- Menu navigasi fixed di atas -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo nama -->
+            <a href="#home" class="nav-logo">Intan</a>
+            
+            <!-- Menu Desktop -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Hamburger Menu untuk Mobile -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <!-- Section beranda dengan nama besar dan tagline -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Selamat Datang</p>
+                <h1 class="hero-name">Intan</h1>
+                <div class="vintage-divider">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h2 class="hero-title">Calon Desainer Visual</h2>
+                <p class="hero-tagline">Kreatif, Komunikatif, dan Profesional</p>
+                <a href="#portfolio" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> Lihat Portofolio
+                </a>
+            </div>
+            <div class="hero-image">
+                <!-- Foto profil dengan fitur upload -->
+                <div class="profile-container">
+                    <div class="profile-image-wrapper">
+                        <img id="heroProfileImg" src="./images/profile.jpg" alt="Foto Profil Intan">
+                        <div class="profile-placeholder" id="heroProfilePlaceholder" style="display: none;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <!-- Overlay upload -->
+                        <div class="profile-upload-overlay">
+                            <label for="profileUpload" class="upload-btn">
+                                <i class="fas fa-camera"></i>
+                                <span>Ganti Foto</span>
+                            </label>
+                            <input type="file" id="profileUpload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                    <!-- Preview dan kontrol upload -->
+                    <div class="upload-controls" id="profileUploadControls" style="display: none;">
+                        <div class="upload-preview">
+                            <img id="profilePreview" alt="Preview">
+                        </div>
+                        <div class="upload-actions">
+                            <button class="btn btn-save" id="saveProfileBtn">
+                                <i class="fas fa-check"></i> Simpan
+                            </button>
+                            <button class="btn btn-cancel" id="cancelProfileBtn">
+                                <i class="fas fa-times"></i> Batal
+                            </button>
+                        </div>
+                    </div>
+                    <p class="upload-info">
+                        <i class="fas fa-info-circle"></i> Klik foto untuk mengganti (maks 5MB)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Efek background gradient -->
+        <div class="hero-bg-shape"></div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <!-- Section tentang diri saya -->
+    <section id="about" class="about paper-texture">
+        <div class="container">
+            <div class="section-header section-header-vintage">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="decorative-line"></div>
+                <p class="section-subtitle">Mari berkenalan lebih dekat</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Foto about yang bisa diganti - upload file "about.jpg" di folder images -->
+                    <div class="about-img-container vintage-frame corner-ornament">
+                        <img id="aboutProfileImg" src="./images/about.jpg" alt="Foto About Intan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="about-img-placeholder" id="aboutProfilePlaceholder" style="display: none;">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Siswi Desain Komunikasi Visual yang Kreatif dan Komunikatif</h3>
+                    <p>
+                        Saya adalah siswi SMKS TI Annisa 2 jurusan Desain Komunikasi Visual. 
+                        Memiliki ketelitian yang tinggi, kemampuan beradaptasi dengan baik, serta 
+                        keterampilan komunikasi dan public speaking yang cukup baik. 
+                        Saya juga memiliki pemahaman dalam bidang kewirausahaan, desain grafis, 
+                        serta penguasaan perangkat lunak Adobe untuk mendukung proses kreatif dan efisiensi kerja.
+                    </p>
+                    <p>
+                        Berpengalaman dalam merancang poster promosi, melaksanakan kegiatan promosi ke beberapa sekolah, 
+                        serta menjalankan kegiatan penjualan baik secara langsung maupun daring. 
+                        Terbiasa bekerja dengan banyak tugas sekaligus dengan perhatian tinggi terhadap detail.
+                    </p>
+                    
+                    <!-- Data Diri Lengkap -->
+                    <div class="personal-data">
+                        <h4><i class="fas fa-id-card"></i> Data Diri</h4>
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <span class="data-label">Nama</span>
+                                <span class="data-value">Intan</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-label">TTL</span>
+                                <span class="data-value">1 Januari 2009</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-label">Alamat</span>
+                                <span class="data-value">Tlajung Udik, Kabupaten Bogor, Jawa Barat</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-label">Jenis Kelamin</span>
+                                <span class="data-value">Perempuan</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-label">Asal Sekolah</span>
+                                <span class="data-value">SMKS TI Annisa 2</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-label">Jurusan</span>
+                                <span class="data-value">Desain Komunikasi Visual</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Riwayat Pendidikan -->
+                    <div class="education-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h4>
+                        <div class="education-list">
+                            <div class="edu-item">
+                                <i class="fas fa-school"></i>
+                                <div>
+                                    <span class="edu-level">Sekolah Dasar</span>
+                                    <span class="edu-name">SDN Cibereum Cileungsi</span>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <i class="fas fa-school"></i>
+                                <div>
+                                    <span class="edu-level">Sekolah Menengah Pertama</span>
+                                    <span class="edu-name">SMP PGRI Klapanunggal</span>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <span class="edu-level">Sekolah Menengah Kejuruan</span>
+                                    <span class="edu-name">SMKS TI Annisa 2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <!-- Section keahlian dengan progress bar -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header section-header-vintage">
+                <h2 class="section-title">Keahlian</h2>
+                <div class="decorative-line"></div>
+                <p class="section-subtitle">Kemampuan dan perangkat yang saya kuasai</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Skill 1: Adobe Photoshop -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Adobe Photoshop</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                
+                <!-- Skill 2: Adobe Illustrator -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3>Adobe Illustrator</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="80%"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                
+                <!-- Skill 3: Public Speaking -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Public Speaking</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="90%"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                
+                <!-- Skill 4: Communication -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="88%"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+                
+                <!-- Skill 5: Design Thinking -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Design Thinking</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="82%"></div>
+                    </div>
+                    <span class="skill-percent">82%</span>
+                </div>
+                
+                <!-- Skill 6: Teamwork -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Teamwork</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="87%"></div>
+                    </div>
+                    <span class="skill-percent">87%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO SECTION ==================== -->
+    <!-- Section portfolio dengan gallery grid dan upload -->
+    <section id="portfolio" class="portfolio paper-texture">
+        <div class="container">
+            <div class="section-header section-header-vintage">
+                <h2 class="section-title">Portofolio</h2>
+                <div class="decorative-line"></div>
+                <p class="section-subtitle">Karya dan proyek desain saya</p>
+            </div>
+            
+            <!-- Upload Section untuk Portfolio -->
+            <div class="portfolio-upload-section">
+                <div class="upload-tabs">
+                    <button class="tab-btn active" data-tab="image">
+                        <i class="fas fa-image"></i> Upload Foto
+                    </button>
+                    <button class="tab-btn" data-tab="video">
+                        <i class="fas fa-video"></i> Upload Video
+                    </button>
+                </div>
+                
+                <!-- Upload Image Panel -->
+                <div class="upload-panel active" id="imageUploadPanel">
+                    <div class="upload-dropzone" id="imageDropzone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop foto di sini atau <span class="browse">klik untuk browse</span></p>
+                        <input type="file" id="portfolioImageUpload" accept="image/*" multiple>
+                        <small>Format: JPG, PNG, GIF (Maks 10MB)</small>
+                    </div>
+                </div>
+                
+                <!-- Upload Video Panel -->
+                <div class="upload-panel" id="videoUploadPanel">
+                    <div class="upload-dropzone" id="videoDropzone">
+                        <i class="fas fa-film"></i>
+                        <p>Drag & drop video di sini atau <span class="browse">klik untuk browse</span></p>
+                        <input type="file" id="portfolioVideoUpload" accept="video/*">
+                        <small>Format: MP4, WebM, MOV (Maks 30 detik, 50MB)</small>
+                    </div>
+                    <div class="video-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Video akan diputar otomatis saat diklik. Durasi maksimal 30 detik.</span>
+                    </div>
+                </div>
+                
+                <!-- Preview Area -->
+                <div class="upload-preview-area" id="portfolioPreviewArea" style="display: none;">
+                    <h4>Preview Karya</h4>
+                    <div class="preview-container" id="previewContainer"></div>
+                    <div class="preview-actions">
+                        <button class="btn btn-save" id="savePortfolioBtn">
+                            <i class="fas fa-plus"></i> Tambah ke Portfolio
+                        </button>
+                        <button class="btn btn-cancel" id="cancelPortfolioBtn">
+                            <i class="fas fa-times"></i> Batal
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Grid - Auto Generated dari JavaScript -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items akan di-generate oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL POPUP ==================== -->
+    <!-- Modal untuk menampilkan detail portfolio (Image & Video) -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-media-container">
+                <img id="modalImg" src="" alt="Portfolio Detail" style="display: none;">
+                <video id="modalVideo" controls style="display: none;">
+                    <source src="" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video.
+                </video>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">Judul Karya</h3>
+                <p id="modalDesc">Deskripsi karya</p>
+                <span class="modal-type" id="modalType"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <!-- Section pengalaman dalam bentuk timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header section-header-vintage">
+                <h2 class="section-title">Pengalaman</h2>
+                <div class="decorative-line"></div>
+                <p class="section-subtitle">Perjalanan dan pengalaman saya</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Experience 1: Ketua Humas -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Organisasi</span>
+                        <h3>Ketua Hubungan Masyarakat (Humas)</h3>
+                        <p>
+                            Mengelola komunikasi organisasi serta mengoordinasikan penyampaian informasi 
+                            kegiatan kepada anggota dan pihak terkait.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Manajemen komunikasi organisasi</li>
+                            <li><i class="fas fa-check"></i> Koordinasi informasi kegiatan</li>
+                            <li><i class="fas fa-check"></i> Hubungan dengan pihak terkait</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 2: Staf Divisi Acara -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Event</span>
+                        <h3>Staf Divisi Acara</h3>
+                        <p>
+                            Berperan dalam perencanaan konsep kegiatan, penyusunan rundown serta 
+                            mendukung kelancaran pelaksanaan acara.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Perencanaan konsep kegiatan</li>
+                            <li><i class="fas fa-check"></i> Penyusunan rundown acara</li>
+                            <li><i class="fas fa-check"></i> Koordinasi pelaksanaan</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 3: Staf Keamanan -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Keamanan</span>
+                        <h3>Staf Keamanan Kegiatan</h3>
+                        <p>
+                            Membantu menjaga ketertiban dan keamanan selama kegiatan berlangsung 
+                            serta memastikan peserta mematuhi aturan.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Menjaga ketertiban acara</li>
+                            <li><i class="fas fa-check"></i> Memastikan keamanan peserta</li>
+                            <li><i class="fas fa-check"></i> Mengawasi aturan kegiatan</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 4: MC -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Master of Ceremony</span>
+                        <h3>MC Acara Sekolah</h3>
+                        <p>
+                            Dipercaya memandu berbagai kegiatan sekolah dengan komunikasi yang interaktif 
+                            sehingga menciptakan suasana acara yang hidup dan terstruktur.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Memandu kegiatan sekolah</li>
+                            <li><i class="fas fa-check"></i> Komunikasi interaktif</li>
+                            <li><i class="fas fa-check"></i> Public speaking</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 5: Ketua Gugus Pramuka -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Kepemimpinan</span>
+                        <h3>Ketua Gugus Pramuka</h3>
+                        <p>
+                            Memimpin dan mengoordinasikan anggota dalam kegiatan kelompok serta 
+                            membangun kerja sama dan kedisiplinan tim.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Kepemimpinan tim</li>
+                            <li><i class="fas fa-check"></i> Koordinasi anggota</li>
+                            <li><i class="fas fa-check"></i> Membangun kerja sama tim</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 6: Tim Promosi -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Promosi</span>
+                        <h3>Tim Promosi Sekolah</h3>
+                        <p>
+                            Berpartisipasi dalam kegiatan promosi sekolah dengan memperkenalkan 
+                            program dan kegiatan sekolah kepada calon peserta didik di beberapa SMP.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Promosi ke berbagai SMP</li>
+                            <li><i class="fas fa-check"></i> Memperkenalkan program sekolah</li>
+                            <li><i class="fas fa-check"></i> Komunikasi dengan calon siswa</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 7: Desain & Kewirausahaan -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge">Desain & Bisnis</span>
+                        <h3>Desain dan Kewirausahaan</h3>
+                        <p>
+                            Membuat berbagai desain poster promosi dan poster produk menggunakan software 
+                            Adobe dengan hasil yang memperoleh penilaian baik. Membuat serta menjual produk 
+                            secara online, termasuk merancang media promosi untuk pemasaran.
+                        </p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check"></i> Desain poster promosi & produk</li>
+                            <li><i class="fas fa-check"></i> Adobe Photoshop & Illustrator</li>
+                            <li><i class="fas fa-check"></i> Penjualan online & media promosi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <!-- Section kontak -->
+    <section id="contact" class="contact paper-texture">
+        <div class="container">
+            <div class="section-header section-header-vintage">
+                <h2 class="section-title">Kontak</h2>
+                <div class="decorative-line"></div>
+                <p class="section-subtitle">Hubungi saya untuk berkolaborasi</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Mari Terhubung!</h3>
+                    <p>
+                        Tertarik untuk berkolaborasi atau ingin tahu lebih banyak tentang saya? 
+                        Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+                    </p>
+                    
+                    <div class="contact-items">
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>intanbelajar01@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Instagram</h4>
+                                <p>@ceceuf_</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Lokasi -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Lokasi</h4>
+                                <p>SMKS TI Annisa 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tombol WhatsApp -->
+                    <a href="https://wa.me/6285774961817" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat WhatsApp (0857-7496-1817)
+                    </a>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/ceceuf_" class="social-icon" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:intanbelajar01@gmail.com" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/6285774961817" class="social-icon" title="WhatsApp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Intan. Dibuat dengan <i class="fas fa-heart"></i> untuk DKV</p>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="./script.js"></script>
+</body>
+</html>
